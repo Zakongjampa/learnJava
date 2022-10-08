@@ -1,22 +1,18 @@
-import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class TestHashSet {
     public static void main(String[] args) {
-        Set<String> nameSet = new HashSet<>();
-        nameSet.add("Jampa");
-        nameSet.add("Phurbu");
-        nameSet.add("Karma");
-        nameSet.add("Tenzin");
-        nameSet.add("Sonam");
-        nameSet.add("Jampa");
+        Set<Integer> set = new TreeSet<>();
 
-        show(nameSet);
-    }
+        for(int i=30; i>0; i--){
+            set.add(i);
+        }
 
-    public static void show(Set<String> set){
-        for(String name : set){
-            System.out.println(name);
+        for(int i:set){
+            System.out.println(i);
         }
     }
+
+   
 }
