@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Map;
 import java.util.TreeMap;
 
 class Student{
@@ -27,7 +28,7 @@ class Student{
 
 public class TestTreeMap {
     public static void main(String[] args) {
-        private Comparator<Student> COMPARE_ROLL = new Comparator<Student>() {
+        Comparator<Student> COMPARE_ROLL = new Comparator<Student>() {
 
             @Override
             public int compare(Student o1, Student o2) {
@@ -41,7 +42,18 @@ public class TestTreeMap {
             
         };
 
-        TreeMap<Integer,Student> student = new TreeMap<Integer,Student>(COMPARE_ROLL);
+        TreeMap<Integer,Student> student = new TreeMap<Integer,Student>();
         student.put(1,new Student("Tenzin"));
+        student.put(2,new Student("Lobsang"));
+        student.put(3,new Student("Yeshi"));
+        student.put(4,new Student("Phurbu"));
+        student.put(5,new Student("Sonam"));
+        student.put(6, new Student("Jampa"));
+
+
+        for(Map.Entry<Integer,Student> list: student.entrySet()){
+            System.out.println("Key : " +list.getKey()+ "\nName : "+list.getValue().getName()+"\nRoll No: "+list.getValue().getRollNo());
+            System.out.println();
+        }
     }
 }
