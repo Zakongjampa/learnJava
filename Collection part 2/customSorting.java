@@ -31,18 +31,18 @@ class Data<K,V>{
 public class customSorting {
     public static void main(String[] args) {
 
-        final Comparator<Data<Integer, String>> COMPARE_KEY = new Comparator<Data<Integer, String>>(){
-            @Override
-            public int compare(Data<Integer,String> o1, Data<Integer, String> o2){
-                if(o1.getKey() > o2.getKey()){
-                    return 1;
-                }else if(o1.getKey() == o2.getKey()){
-                    return 0;
-                }else{
-                    return -1;
-                }
-            }
-        };
+        // final Comparator<Data<Integer, String>> COMPARE_KEY = new Comparator<Data<Integer, String>>(){
+        //     @Override
+        //     public int compare(Data<Integer,String> o1, Data<Integer, String> o2){
+        //         if(o1.getKey() > o2.getKey()){
+        //             return 1;
+        //         }else if(o1.getKey() == o2.getKey()){
+        //             return 0;
+        //         }else{
+        //             return -1;
+        //         }
+        //     }
+        // };
 
         final Comparator<Data<Integer,String>> COMPARE_NAME_LENGTH = new Comparator<Data<Integer,String>>() {
             @Override
